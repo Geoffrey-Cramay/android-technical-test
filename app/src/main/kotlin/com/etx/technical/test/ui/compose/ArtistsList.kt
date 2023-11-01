@@ -10,8 +10,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.etx.technical.test.core.Artist
-import com.majelan.androidtechnicaltest.R
+import com.etx.technical.test.core.model.Album
+import com.etx.technical.test.core.model.Artist
 
 
 @Composable
@@ -28,9 +28,17 @@ fun ArtistsList(
     ) {
         items(
             listOf(
-                Artist("0", "Song 0", R.drawable.ic_launcher_background),
-                Artist("1", "Song 1", R.drawable.ic_launcher_background),
-                Artist("2", "Song 2", R.drawable.ic_launcher_background),
+                Artist(
+                    "Artist 0",
+                    Album(
+                        title = "Album 1",
+                        genre = "genre",
+                        cover = "cover",
+                        totalTrackCount = 0,
+                        site = "site",
+                        songList = emptyList()
+                    )
+                ),
             )
         ) {
             ArtistListItem(it, onItemClick)

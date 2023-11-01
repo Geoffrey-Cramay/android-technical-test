@@ -14,7 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.etx.technical.test.core.Artist
+import com.etx.technical.test.core.model.Artist
 
 @Composable
 fun ArtistListItem(
@@ -37,7 +37,7 @@ fun ArtistListItem(
                     .fillMaxWidth()
                     .align(Alignment.CenterVertically)
             ) {
-                Text(text = artist.title)
+                Text(text = "artist.name")
                 Text(text = "View Detail")
             }
         }

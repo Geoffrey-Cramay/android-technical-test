@@ -11,12 +11,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.etx.technical.test.core.Artist
+import com.etx.technical.test.core.model.Artist
+import com.majelan.androidtechnicaltest.R
 
 @Composable
 fun ArtistImage(artist: Artist) {
     Image(
-        painter = painterResource(id = artist.image),
+        painter = painterResource(id = R.drawable.ic_launcher_background),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier

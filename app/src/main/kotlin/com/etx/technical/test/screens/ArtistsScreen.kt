@@ -9,6 +9,6 @@ import com.etx.technical.test.ui.compose.ArtistsList
 @Composable
 fun ArtistsScreen(navController: NavHostController) {
     ArtistsList(modifier = Modifier) { artist ->
-        navController.navigate(Screens.Media.getMediaScreenPath(artist.id))
+        navController.navigate(Screens.Media.getMediaScreenPath(artist.name))
     }
 }
