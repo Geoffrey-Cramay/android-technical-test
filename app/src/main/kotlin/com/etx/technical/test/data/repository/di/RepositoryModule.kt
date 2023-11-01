@@ -10,24 +10,24 @@ import com.etx.technical.test.data.repository.parser.SongsParserImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
-import dagger.hilt.android.scopes.ActivityScoped
+import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.scopes.ViewModelScoped
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(ViewModelComponent::class)
 object RepositoryModule {
 
     @Provides
-    @ActivityScoped
+    @ViewModelScoped
     fun provideRemoteDataSource(service: SongsService): RemoteSongsDataSource =
         RemoteSongsDataSourceImpl(service)
 
     @Provides
-    @ActivityScoped
+    @ViewModelScoped
     fun provideSongsParser(): SongsParser = SongsParserImpl
 
     @Provides
-    @ActivityScoped
+    @ViewModelScoped
     fun provideSongsRepository(
         dataSource: RemoteSongsDataSource,
         parser: SongsParser,
